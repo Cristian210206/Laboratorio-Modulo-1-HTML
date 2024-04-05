@@ -9,19 +9,12 @@
 * {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-}
-
-strong {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -31,7 +24,6 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: auto;
   border-bottom: 1px solid #000;
   position: sticky;
   top: 0;
@@ -95,16 +87,13 @@ header {
   grid-template-columns: repeat(3, 1fr);
   width: 80%;
   margin: auto;
+  gap: 32px;
+  justify-content: center;
 }
 
 .texto-tarjeta {
-  display: grid;
   display: flex;
-  flex-direction: row;
-  width: 70%;
-  grid-template-columns: 1fr, 1fr;
   justify-content: space-between;
-  margin: auto;
   padding: 1rem;
 }
 
@@ -112,34 +101,12 @@ header {
   border-radius: 15px;
   margin: 0 auto;
   display: block;
+  width: 100%;
 }
 
 @media (max-width: 920px) {
   .contenido {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .texto-tarjeta {
-    max-width: 40%;
-  }
-}
-
-@media (max-width: 800px) {
-  .texto-tarjeta {
-    max-width: 45%;
-  }
-}
-
-@media (max-width: 700px) {
-  .texto-tarjeta {
-    max-width: 55%;
-  }
-}
-
-@media (max-width: 600px) {
-  .texto-tarjeta {
-    max-width: 70%;
+    grid-template-columns: minmax(50px, 350px);
   }
 }
 /* Pie de pagina */
